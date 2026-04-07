@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Link } from '@inertiajs/react';
 import { BookOpenText, ImageOff } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import type { BookCardData } from '@/types';
@@ -54,9 +53,6 @@ export default function BookCard({ book }: BookCardProps) {
                         <CardTitle className="text-lg leading-snug">{book.title}</CardTitle>
                         <CardDescription>Penulis: {book.author}</CardDescription>
                     </div>
-                    <Badge variant="outline" className="shrink-0">
-                        #{book.id}
-                    </Badge>
                 </div>
             </CardHeader>
             <CardContent className="flex flex-1 flex-col gap-4">
