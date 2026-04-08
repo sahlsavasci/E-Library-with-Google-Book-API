@@ -52,7 +52,7 @@ export default function BooksIndex({ books, filters }: BooksIndexProps) {
                         <Badge variant="secondary">E-Library</Badge>
                         <h1 className="text-3xl font-semibold tracking-tight">Katalog Buku</h1>
                         <p className="max-w-2xl text-sm text-muted-foreground">
-                            Halaman ini menampilkan seluruh buku yang tersimpan di sistem. Kamu bisa
+                            Halaman ini menampilkan seluruh buku yang kamu simpan sendiri. Kamu bisa
                             mencari, meninjau, dan membuka detail buku dari satu tampilan yang rapi.
                         </p>
                     </div>
@@ -104,7 +104,7 @@ export default function BooksIndex({ books, filters }: BooksIndexProps) {
                                     <CardDescription className="mx-auto max-w-xl text-sm">
                                         {books.total > 0
                                             ? 'Coba gunakan kata kunci lain atau hapus pencarian untuk melihat seluruh koleksi buku.'
-                                            : 'Koleksi buku masih kosong. Kamu bisa menambahkan buku secara manual atau mengambil data dari Google Books agar katalog langsung terlihat rapi.'}
+                                            : 'Koleksi pribadimu masih kosong. Kamu bisa menambahkan buku secara manual atau mengambil data dari Google Books agar bookshelf langsung terlihat rapi.'}
                                     </CardDescription>
                                 </div>
 
@@ -165,7 +165,7 @@ export default function BooksIndex({ books, filters }: BooksIndexProps) {
 BooksIndex.layout = {
     breadcrumbs: [
         {
-            title: 'Books',
+            title: 'Buku',
             href: '/books',
         },
     ],

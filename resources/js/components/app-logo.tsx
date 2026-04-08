@@ -11,7 +11,7 @@ export default function AppLogo() {
                     E-Library
                 </span>
                 <span className="truncate text-xs text-sidebar-foreground/70">
-                    Ruang Baca Digital
+                    Bookshelf Pribadi
                 </span>
             </div>
         </>

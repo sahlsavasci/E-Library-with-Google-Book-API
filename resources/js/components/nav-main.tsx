@@ -15,7 +15,7 @@ export function NavMain({ items = [] }: { items: NavItem[] }) {
     return (
         <SidebarGroup className="px-2 py-0">
             <SidebarGroupLabel className="px-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-sidebar-foreground/55">
-                Workspace
+                Bookshelf
             </SidebarGroupLabel>
             <SidebarMenu>
                 {items.map((item) => (

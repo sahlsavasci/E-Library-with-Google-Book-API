@@ -102,7 +102,7 @@ export default function BooksCreate() {
                             <CardTitle className="text-2xl">Tambah Buku Baru</CardTitle>
                             <CardDescription className="max-w-2xl text-sm">
                                 Tambahkan buku secara manual atau mulai dari hasil Google Books agar input
-                                lebih cepat, rapi, dan cocok untuk katalog demo maupun data asli.
+                                lebih cepat, rapi, dan cocok untuk mengisi bookshelf pribadimu.
                             </CardDescription>
                         </div>
                         <div className="inline-flex items-center gap-2 rounded-full border bg-muted/40 px-3 py-1 text-xs font-medium text-muted-foreground">
@@ -117,7 +117,7 @@ export default function BooksCreate() {
                         <CardTitle>Cari dari Google Books</CardTitle>
                         <CardDescription>
                             Gunakan pencarian ini jika kamu ingin mengambil data buku otomatis dari Google
-                            Books, lalu mengisikan hasilnya ke formulir tambah buku.
+                            Books, lalu mengisikan hasilnya ke formulir tambah buku di koleksimu.
                         </CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-4">
@@ -187,7 +187,7 @@ export default function BooksCreate() {
                                 </p>
                                 <p className="mt-2 text-sm text-muted-foreground">
                                     Coba gunakan kata kunci judul buku, nama author, atau topik yang lebih
-                                    spesifik untuk mendapatkan hasil yang lebih relevan.
+                                    spesifik untuk mendapatkan hasil yang lebih relevan untuk koleksimu.
                                 </p>
                             </div>
                         ) : null}
@@ -199,7 +199,7 @@ export default function BooksCreate() {
                         <CardTitle>Form Tambah Buku</CardTitle>
                         <CardDescription>
                             Formulir ini bisa diisi manual atau dibantu hasil pencarian Google Books di
-                            atas. Saat dikirim, data akan masuk ke backend melalui route `POST /books`.
+                            atas. Saat dikirim, data akan masuk ke koleksi pribadimu melalui route `POST /books`.
                         </CardDescription>
                     </CardHeader>
                     <CardContent className="flex flex-col gap-4">
@@ -214,7 +214,7 @@ export default function BooksCreate() {
 
                         <div>
                             <Button variant="outline" asChild>
-                                <Link href="/books">Kembali ke Katalog</Link>
+                                <Link href="/books">Kembali ke Koleksiku</Link>
                             </Button>
                         </div>
                     </CardContent>

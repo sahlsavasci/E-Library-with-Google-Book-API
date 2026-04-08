@@ -57,7 +57,7 @@ class BookController extends Controller
         $search = trim((string) $request->string('search'));
 
         return Inertia::render('books/index', [
-            'books' => Book::query()
+            'books' => Book::query()->where('created_by', $request->user()->id)
                 ->when($search !== '', function ($query) use ($search) {
                     $query->where(function ($bookQuery) use ($search) {
                         $bookQuery
@@ -99,8 +99,10 @@ class BookController extends Controller
     /**
      * Display the specified book.
      */
-    public function show(Book $book): Response
+    public function show(Book $book, Request $request): Response
     {
+        $this->ensureBookOwner($book, $request);
+
         $book->load('creator');
 
         return Inertia::render('books/show', [

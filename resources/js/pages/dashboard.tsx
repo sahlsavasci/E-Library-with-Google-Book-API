@@ -34,13 +34,11 @@ export default function Dashboard({ stats, latestBooks }: DashboardProps) {
                     <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                         <div className="space-y-2">
                             <Badge variant="secondary">Dashboard</Badge>
-                            <h1 className="text-3xl font-semibold tracking-tight">
-                                Ringkasan E-Library
-                            </h1>
+                            <h1 className="text-3xl font-semibold tracking-tight">Ringkasan Koleksiku</h1>
                             <p className="max-w-2xl text-sm text-muted-foreground">
                                 {hasBooks
-                                    ? 'Halaman ini merangkum kondisi koleksi buku saat ini, termasuk statistik utama dan buku terbaru yang baru masuk ke sistem.'
-                                    : 'Koleksi buku masih kosong. Dashboard ini siap menjadi pusat ringkasan setelah kamu menambahkan buku pertama, baik secara manual maupun dari Google Books.'}
+                                    ? 'Halaman ini merangkum kondisi koleksi bukumu saat ini, termasuk statistik utama dan buku terbaru yang kamu simpan.'
+                                    : 'Koleksi pribadimu masih kosong. Dashboard ini akan mulai terisi setelah kamu menambahkan buku pertama, baik secara manual maupun dari Google Books.'}
                             </p>
                         </div>
 
@@ -69,8 +67,8 @@ export default function Dashboard({ stats, latestBooks }: DashboardProps) {
                                 <CardTitle className="mt-2 text-3xl">{stats.totalBooks}</CardTitle>
                                 <p className="mt-2 text-sm text-muted-foreground">
                                     {hasBooks
-                                        ? 'Jumlah seluruh buku yang saat ini tersimpan di katalog.'
-                                        : 'Belum ada buku di katalog. Tambahkan data pertama untuk memulai koleksi.'}
+                                        ? 'Jumlah seluruh buku yang saat ini tersimpan di koleksimu.'
+                                        : 'Belum ada buku di koleksimu. Tambahkan data pertama untuk mulai membangun bookshelf pribadi.'}
                                 </p>
                             </div>
                             <BookOpen className="size-5 text-muted-foreground" />
@@ -86,8 +84,8 @@ export default function Dashboard({ stats, latestBooks }: DashboardProps) {
                                 </CardTitle>
                                 <p className="mt-2 text-sm text-muted-foreground">
                                     {stats.booksWithGoogleId > 0
-                                        ? 'Menunjukkan buku yang diimpor atau terkait dengan Google Books.'
-                                        : 'Belum ada buku dari Google Books. Fitur import bisa dipakai untuk mempercepat input data.'}
+                                        ? 'Menunjukkan buku di koleksimu yang diimpor atau terkait dengan Google Books.'
+                                        : 'Belum ada buku dari Google Books di koleksimu. Fitur import bisa dipakai untuk mempercepat input data.'}
                                 </p>
                             </div>
                             <Sparkles className="size-5 text-muted-foreground" />
@@ -101,8 +99,8 @@ export default function Dashboard({ stats, latestBooks }: DashboardProps) {
                                 <CardTitle className="mt-2 text-3xl">{stats.booksThisYear}</CardTitle>
                                 <p className="mt-2 text-sm text-muted-foreground">
                                     {stats.booksThisYear > 0
-                                        ? 'Membantu melihat aktivitas input buku pada tahun berjalan.'
-                                        : 'Belum ada buku yang dicatat pada tahun ini.'}
+                                        ? 'Membantu melihat aktivitas penambahan buku di koleksimu pada tahun berjalan.'
+                                        : 'Belum ada buku baru yang kamu catat pada tahun ini.'}
                                 </p>
                             </div>
                             <Database className="size-5 text-muted-foreground" />
@@ -120,8 +118,8 @@ export default function Dashboard({ stats, latestBooks }: DashboardProps) {
                                 <CardTitle>Dashboard siap diisi</CardTitle>
                                 <CardDescription className="mx-auto max-w-2xl text-sm">
                                     Saat buku pertama ditambahkan, statistik akan mulai terisi dan daftar
-                                    buku terbaru akan langsung muncul di bawah. Ini cocok untuk presentasi
-                                    karena user tahu dengan jelas langkah berikutnya.
+                                    buku terbaru akan langsung muncul di bawah. Jadi kamu bisa melihat
+                                    perkembangan koleksimu sendiri dengan lebih jelas.
                                 </CardDescription>
                             </div>
                             <div className="flex flex-wrap justify-center gap-3">
@@ -134,7 +132,7 @@ export default function Dashboard({ stats, latestBooks }: DashboardProps) {
                                 <Button variant="outline" asChild>
                                     <Link href="/books">
                                         <Search className="size-4" />
-                                        Buka Halaman Books
+                                        Buka Katalog Pribadi
                                     </Link>
                                 </Button>
                             </div>
@@ -147,8 +145,8 @@ export default function Dashboard({ stats, latestBooks }: DashboardProps) {
                         <CardTitle>Buku Terbaru</CardTitle>
                         <CardDescription>
                             {hasBooks
-                                ? 'Lima buku terakhir yang masuk ke sistem akan muncul di sini.'
-                                : 'Bagian ini akan otomatis terisi setelah kamu menambahkan buku ke katalog.'}
+                                ? 'Lima buku terakhir yang kamu tambahkan ke koleksi akan muncul di sini.'
+                                : 'Bagian ini akan otomatis terisi setelah kamu menambahkan buku ke koleksi pribadimu.'}
                         </CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-4">
@@ -177,7 +175,7 @@ export default function Dashboard({ stats, latestBooks }: DashboardProps) {
                                 </p>
                                 <p className="mt-2 text-sm text-muted-foreground">
                                     Setelah buku pertama dibuat, daftar terbaru akan muncul di sini agar
-                                    aktivitas katalog lebih mudah dipantau.
+                                    aktivitas koleksimu lebih mudah dipantau.
                                 </p>
                             </div>
                         )}

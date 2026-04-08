@@ -24,7 +24,7 @@ const mainNavItems: NavItem[] = [
         icon: LayoutGrid,
     },
     {
-        title: 'Buku',
+        title: 'Koleksiku',
         href: '/books',
         icon: BookCopy,
     },
@@ -37,7 +37,7 @@ const mainNavItems: NavItem[] = [
 
 const footerNavItems: NavItem[] = [
     {
-        title: 'Halaman Utama',
+        title: 'Landing Page',
         href: '/',
         icon: BookOpenText,
     },

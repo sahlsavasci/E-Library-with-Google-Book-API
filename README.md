@@ -1,13 +1,13 @@
 # E-Library
 
-E-Library adalah aplikasi web manajemen katalog buku yang dibangun dengan Laravel, React, Inertia.js, dan Tailwind CSS. Aplikasi ini membantu pengguna mengelola koleksi buku digital melalui dashboard yang rapi, fitur CRUD, pencarian, pagination, serta integrasi Google Books untuk mempercepat input data.
+E-Library adalah aplikasi web manajemen buku pribadi yang dibangun dengan Laravel, React, Inertia.js, dan Tailwind CSS. Aplikasi ini membantu pengguna mengelola koleksi buku digital miliknya sendiri melalui dashboard yang rapi, fitur CRUD, pencarian, pagination, serta integrasi Google Books untuk mempercepat input data.
 
 ## Gambaran Singkat
 
-Project ini berfokus pada kebutuhan **Library Management System**, yaitu pengelolaan data buku dalam satu sistem web. Pengguna dapat:
+Project ini berfokus pada kebutuhan **personal bookshelf / library management system**, yaitu pengelolaan data buku pribadi dalam satu sistem web. Pengguna dapat:
 
 - masuk ke aplikasi melalui sistem autentikasi Laravel
-- melihat ringkasan katalog di dashboard
+- melihat ringkasan koleksi pribadi di dashboard
 - menambahkan, mengedit, melihat, dan menghapus buku
 - mencari buku dari database
 - mengimpor metadata buku dari Google Books API
@@ -25,13 +25,13 @@ Project ini cocok untuk:
   Login, register, verifikasi email, lupa password, dan pengelolaan sesi.
 
 - **Dashboard ringkas**
-  Menampilkan total buku, jumlah buku dari Google Books, buku yang ditambahkan tahun ini, dan daftar buku terbaru.
+  Menampilkan total buku milik user, jumlah buku dari Google Books, buku yang ditambahkan tahun ini, dan daftar buku terbaru.
 
 - **Manajemen buku (CRUD)**
-  Pengguna dapat membuat, membaca, memperbarui, dan menghapus data buku.
+  Pengguna dapat membuat, membaca, memperbarui, dan menghapus data buku miliknya sendiri.
 
 - **Pencarian buku**
-  Pencarian katalog dilakukan dari database dan terintegrasi dengan pagination.
+  Pencarian dilakukan pada koleksi milik user dan terintegrasi dengan pagination.
 
 - **Integrasi Google Books API**
   Pengguna dapat mencari buku dari Google Books lalu mengisi form secara otomatis.
@@ -156,7 +156,7 @@ php artisan config:clear
 
 ## Import Data Demo dari Google Books
 
-Untuk mengisi katalog demo dengan data buku yang lebih realistis:
+Untuk mengisi koleksi demo dengan data buku yang lebih realistis:
 
 ```bash
 php artisan books:demo-google
@@ -207,9 +207,9 @@ php artisan test
 Saat ini project sudah mencakup MVP yang kuat untuk demo:
 
 - autentikasi
-- dashboard
+- dashboard personal
 - CRUD buku
-- pencarian dan pagination
+- pencarian dan pagination per user
 - integrasi Google Books
 - empty state yang rapi
 - UI yang lebih konsisten untuk presentasi

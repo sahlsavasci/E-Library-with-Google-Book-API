@@ -128,8 +128,8 @@ export default function BooksShow({ book }: BooksShowProps) {
                                 </p>
                                 <p className="mt-2 text-sm leading-6 text-muted-foreground">
                                     {book.google_books_id
-                                        ? 'Buku ini sudah terhubung dengan Google Books, jadi metadata dasarnya lebih mudah dilacak dan diperbarui.'
-                                        : 'Buku ini ditambahkan langsung ke katalog lokal tanpa referensi Google Books.'}
+                                        ? 'Buku ini sudah terhubung dengan Google Books, jadi metadata dasarnya lebih mudah dilacak dan diperbarui di koleksimu.'
+                                        : 'Buku ini ditambahkan langsung ke koleksi pribadimu tanpa referensi Google Books.'}
                                 </p>
                             </div>
 
@@ -139,8 +139,8 @@ export default function BooksShow({ book }: BooksShowProps) {
                                 </p>
                                 <p className="mt-2 text-sm leading-6 text-muted-foreground">
                                     {book.cover_image
-                                        ? 'Cover buku tersedia dan sudah tampil di halaman detail maupun card katalog.'
-                                        : 'Belum ada cover. Kamu bisa menambahkan URL gambar dari halaman edit untuk membuat tampilan katalog lebih rapi.'}
+                                        ? 'Cover buku tersedia dan sudah tampil di halaman detail maupun card koleksimu.'
+                                        : 'Belum ada cover. Kamu bisa menambahkan URL gambar dari halaman edit untuk membuat tampilan koleksimu lebih rapi.'}
                                 </p>
                             </div>
                         </div>
